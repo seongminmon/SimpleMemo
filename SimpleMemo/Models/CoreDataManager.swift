@@ -24,7 +24,7 @@ final class CoreDataManager {
     // 엔티티 이름 (코어데이터에 저장된 객체 이름)
     let modelName = "Memo"
     
-    // MARK: - CRUD 구현
+    // MARK: - CRUD
     
     // [Read] 코어데이터에 저장된 데이터 모두 읽어오기
     func getMemoList() -> [Memo] {
