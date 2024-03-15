@@ -16,6 +16,8 @@
 		247315E42BA3E9CB00E89184 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247315E22BA3E9CB00E89184 /* LaunchScreen.storyboard */; };
 		247315F22BA3EE8800E89184 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 247315F12BA3EE8800E89184 /* SnapKit */; };
 		247315F42BA3EE8800E89184 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 247315F32BA3EE8800E89184 /* SnapKit-Dynamic */; };
+		247315F72BA431AD00E89184 /* Memo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247315F52BA431AD00E89184 /* Memo+CoreDataClass.swift */; };
+		247315F82BA431AD00E89184 /* Memo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247315F62BA431AD00E89184 /* Memo+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		247315E02BA3E9CB00E89184 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		247315E32BA3E9CB00E89184 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		247315E52BA3E9CB00E89184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		247315F52BA431AD00E89184 /* Memo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Memo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		247315F62BA431AD00E89184 /* Memo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Memo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 		247315EF2BA3EE1900E89184 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				247315F52BA431AD00E89184 /* Memo+CoreDataClass.swift */,
+				247315F62BA431AD00E89184 /* Memo+CoreDataProperties.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -176,8 +182,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				247315F72BA431AD00E89184 /* Memo+CoreDataClass.swift in Sources */,
 				247315D92BA3E9CA00E89184 /* MainViewController.swift in Sources */,
 				247315D52BA3E9CA00E89184 /* AppDelegate.swift in Sources */,
+				247315F82BA431AD00E89184 /* Memo+CoreDataProperties.swift in Sources */,
 				247315D72BA3E9CA00E89184 /* SceneDelegate.swift in Sources */,
 				247315DF2BA3E9CA00E89184 /* SimpleMemo.xcdatamodeld in Sources */,
 			);
