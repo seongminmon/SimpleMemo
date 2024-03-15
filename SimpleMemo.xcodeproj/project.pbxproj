@@ -18,6 +18,7 @@
 		247315F42BA3EE8800E89184 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 247315F32BA3EE8800E89184 /* SnapKit-Dynamic */; };
 		247315F72BA431AD00E89184 /* Memo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247315F52BA431AD00E89184 /* Memo+CoreDataClass.swift */; };
 		247315F82BA431AD00E89184 /* Memo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247315F62BA431AD00E89184 /* Memo+CoreDataProperties.swift */; };
+		247315FA2BA433AF00E89184 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247315F92BA433AF00E89184 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		247315E52BA3E9CB00E89184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		247315F52BA431AD00E89184 /* Memo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Memo+CoreDataClass.swift"; sourceTree = "<group>"; };
 		247315F62BA431AD00E89184 /* Memo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Memo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		247315F92BA433AF00E89184 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			children = (
 				247315F52BA431AD00E89184 /* Memo+CoreDataClass.swift */,
 				247315F62BA431AD00E89184 /* Memo+CoreDataProperties.swift */,
+				247315F92BA433AF00E89184 /* CoreDataManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				247315D52BA3E9CA00E89184 /* AppDelegate.swift in Sources */,
 				247315F82BA431AD00E89184 /* Memo+CoreDataProperties.swift in Sources */,
 				247315D72BA3E9CA00E89184 /* SceneDelegate.swift in Sources */,
+				247315FA2BA433AF00E89184 /* CoreDataManager.swift in Sources */,
 				247315DF2BA3E9CA00E89184 /* SimpleMemo.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
