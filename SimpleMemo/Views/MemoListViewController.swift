@@ -12,6 +12,19 @@ class MemoListViewController: UIViewController {
     
     private let tableView = UITableView()
     
+    lazy var addButton: UIBarButtonItem = {
+        let button = UIBarButtonItem(
+            barButtonSystemItem: .add,
+            target: self,
+            action: #selector(addButtonTapped)
+        )
+        button.tintColor = .label
+        
+        return button
+    }()
+    
+    // MARK: - MVVM
+    
     let viewModel: MemoListViewModel
     
     init(viewModel: MemoListViewModel) {
@@ -31,8 +44,14 @@ class MemoListViewController: UIViewController {
         setupLayout()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
     private func setupNavi() {
         title = viewModel.title
+        navigationItem.rightBarButtonItem = addButton
     }
     
     private func setupTableView() {
@@ -48,14 +67,14 @@ class MemoListViewController: UIViewController {
         }
     }
     
+    @objc func addButtonTapped() {
+        viewModel.goToDetailVC(currentVC: self, memo: nil)
+    }
 }
 
 extension MemoListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return viewModel.memoList.count
-        
-        // test
-        return 5
+        return viewModel.memoList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -63,12 +82,9 @@ extension MemoListViewController: UITableViewDataSource {
             withIdentifier: MemoCell.identifier,
             for: indexPath) as? MemoCell else { return UITableViewCell() }
         
-//        let memo = viewModel.memoList[indexPath.row]
-//        let memoVM = viewModel.makeMemoVM(memo: memo)
-//        cell.viewModel = memoVM
-        
-        // test
-        cell.viewModel = MemoViewModel(dataManager: CoreDataManager.shared, memo: nil)
+        let memo = viewModel.memoList[indexPath.row]
+        let memoVM = viewModel.makeMemoVM(memo: memo)
+        cell.viewModel = memoVM
         
         cell.selectionStyle = .none
         return cell

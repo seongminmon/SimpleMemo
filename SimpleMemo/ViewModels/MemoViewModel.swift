@@ -19,5 +19,9 @@ class MemoViewModel {
         self.memo = memo
     }
     
+    var title: String {
+        return memo == nil ? "새로운 메모 생성하기" : "메모 수정하기"
+    }
+    
     
 }

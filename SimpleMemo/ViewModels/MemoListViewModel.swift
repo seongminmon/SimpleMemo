@@ -26,4 +26,11 @@ class MemoListViewModel {
     func makeMemoVM(memo: Memo?) -> MemoViewModel {
         return MemoViewModel(dataManager: self.dataManager, memo: memo)
     }
+    
+    func goToDetailVC(currentVC: UIViewController, memo: Memo?) {
+        let memoVM = makeMemoVM(memo: memo)
+        let detailVC = DetailViewController(viewModel: memoVM)
+        let naviVC = currentVC.navigationController
+        naviVC?.pushViewController(detailVC, animated: true)
+    }
 }

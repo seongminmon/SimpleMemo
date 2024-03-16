@@ -22,6 +22,7 @@
 		247315FC2BA438BE00E89184 /* MemoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247315FB2BA438BE00E89184 /* MemoListViewModel.swift */; };
 		247316042BA444F100E89184 /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247316032BA444F100E89184 /* MemoCell.swift */; };
 		247316082BA47C6500E89184 /* MemoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247316072BA47C6500E89184 /* MemoViewModel.swift */; };
+		2473160A2BA529BA00E89184 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247316092BA529BA00E89184 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		247315FB2BA438BE00E89184 /* MemoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListViewModel.swift; sourceTree = "<group>"; };
 		247316032BA444F100E89184 /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
 		247316072BA47C6500E89184 /* MemoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewModel.swift; sourceTree = "<group>"; };
+		247316092BA529BA00E89184 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			children = (
 				247315D82BA3E9CA00E89184 /* MemoListViewController.swift */,
 				247316032BA444F100E89184 /* MemoCell.swift */,
+				247316092BA529BA00E89184 /* DetailViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2473160A2BA529BA00E89184 /* DetailViewController.swift in Sources */,
 				247315F72BA431AD00E89184 /* Memo+CoreDataClass.swift in Sources */,
 				247316042BA444F100E89184 /* MemoCell.swift in Sources */,
 				247316082BA47C6500E89184 /* MemoViewModel.swift in Sources */,

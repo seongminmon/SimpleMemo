@@ -44,7 +44,7 @@ class MemoCell: UITableViewCell {
         button.backgroundColor = .systemPink
         button.tintColor = .white
         
-        // test
+        // 버튼 둥글게 만들기
         button.clipsToBounds = true
         button.layer.cornerRadius = 10
         
@@ -79,12 +79,8 @@ class MemoCell: UITableViewCell {
     
     // 뷰모델을 이용한 뷰 세팅
     private func setupUI() {
-//        contentsLabel.text = viewModel.memo?.contents
-//        dateLabel.text = viewModel.memo?.dateString
-        
-        // test
-        contentsLabel.text = "안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 "
-        dateLabel.text = "2024-03-15"
+        contentsLabel.text = viewModel.memo?.contents
+        dateLabel.text = viewModel.memo?.dateString
     }
     
     private func setupStackView() {
