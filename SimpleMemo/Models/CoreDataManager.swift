@@ -9,6 +9,7 @@ import UIKit
 import CoreData
 
 // MARK: - 코어데이터 관리하는 매니저
+
 final class CoreDataManager {
     
     // 싱글톤으로 만들기
@@ -99,12 +100,11 @@ final class CoreDataManager {
                         appDelegate?.saveContext()
                     }
                 }
-                completion()
             } catch {
                 print("Delete 실패")
-                completion()
             }
         }
+        completion()
     }
     
     // [Update] 코어데이터에서 데이터 수정하기 (일치하는 데이터 찾아서 => 수정)
@@ -133,11 +133,11 @@ final class CoreDataManager {
                         appDelegate?.saveContext()
                     }
                 }
-                completion()
             } catch {
                 print("Update 실패")
-                completion()
             }
         }
+        completion()
     }
+    
 }

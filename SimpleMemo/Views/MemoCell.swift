@@ -9,14 +9,16 @@ import UIKit
 import SnapKit
 
 class MemoCell: UITableViewCell {
-    
     static let identifier = "MemoCell"
     
-    var viewModel: MemoViewModel! {
+    var memo: Memo? {
         didSet {
             setupUI()
         }
     }
+    
+    // 클로저 방식으로 구현 (화면 이동을 cell이 아닌 ViewController 에서 해야하기 때문에)
+    var updateButtonAction: (MemoCell) -> Void = { (sender) in }
     
     // MARK: - UI 구현
     
@@ -35,18 +37,23 @@ class MemoCell: UITableViewCell {
         return label
     }()
     
-    let updateButton: UIButton = {
+    lazy var updateButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(systemName: "pencil.tip"), for: .normal)
         button.setTitle("수정하기", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 18, weight: .bold)
         
-        button.backgroundColor = .systemPink
         button.tintColor = .white
+        button.backgroundColor = .systemPink
         
-        // 버튼 둥글게 만들기
         button.clipsToBounds = true
         button.layer.cornerRadius = 10
+        
+        button.addTarget(
+            self,
+            action: #selector(updateButtonTapped),
+            for: .touchUpInside
+        )
         
         return button
     }()
@@ -68,7 +75,6 @@ class MemoCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
-        
         setupStackView()
         setupLayout()
     }
@@ -77,10 +83,9 @@ class MemoCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // 뷰모델을 이용한 뷰 세팅
     private func setupUI() {
-        contentsLabel.text = viewModel.memo?.contents
-        dateLabel.text = viewModel.memo?.dateString
+        contentsLabel.text = memo?.contents
+        dateLabel.text = memo?.dateString
     }
     
     private func setupStackView() {
@@ -113,5 +118,10 @@ class MemoCell: UITableViewCell {
         backView.snp.makeConstraints {
             $0.height.equalTo(60)
         }
+    }
+    
+    // 뷰 컨트롤러에서 전해준 동작 실행
+    @objc func updateButtonTapped() {
+        updateButtonAction(self)
     }
 }

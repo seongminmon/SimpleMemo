@@ -14,13 +14,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        
-        let dataManager = CoreDataManager.shared
-        let memoListVM = MemoListViewModel(dataManager: dataManager, title: "메모")
-        let memoListVC = MemoListViewController(viewModel: memoListVM)
-        let naviVC = UINavigationController(rootViewController: memoListVC)
-        
-        window?.rootViewController = naviVC
+
+        window?.rootViewController = UINavigationController(rootViewController: MemoListViewController())
         window?.backgroundColor = .systemBackground
         window?.makeKeyAndVisible()
     }
